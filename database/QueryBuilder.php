@@ -20,6 +20,20 @@ class QueryBuilder
         return $statement->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    public function getOne($table, $id)
+    {
+        $sql = "SELECT * FROM posts WHERE id=:id";
+
+        $statement = $this->pdo->prepare($sql);
+        //$statement->bindValue(':id', $id);
+      //  $statement->bindParam(':id', $id);
+        $statement->execute([
+            'id' => $id
+        ]);
+        $result = $statement->fetch(PDO::FETCH_ASSOC);
+        return $result;
+    }
+
     public function create($table, $data)
     {
 
