@@ -4,8 +4,7 @@ include 'functions.php';
 $db = include 'database/start.php';
 
 
-$posts = $db->getAll();
+$posts = $db->getAll('posts');
 
-// 4. foreach all
 include 'index.view.php';
 ?>

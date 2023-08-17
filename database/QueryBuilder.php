@@ -12,16 +12,11 @@ class QueryBuilder
         $this->pdo = $pdo;
     }
 
-    function getAll()
+    public function getAll($table)
     {
-//        dd($this->pdo);
-
-        // 2. Select to db
-        $sql = 'SELECT * FROM posts';
+        $sql = "SELECT * FROM {$table}";
         $statement =$this->pdo->prepare($sql);
         $statement->execute();
-
-        //3. Gettting
         return $statement->fetchAll(PDO::FETCH_ASSOC);
     }
 }
