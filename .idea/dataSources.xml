@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="app3@127.0.0.1" uuid="dffe1bb1-3453-4d74-b8f7-5f9aa495baa2">
+    <data-source source="LOCAL" name="oop-php@127.0.0.1" uuid="dffe1bb1-3453-4d74-b8f7-5f9aa495baa2">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://127.0.0.1:3306/app3</jdbc-url>
+      <jdbc-url>jdbc:mysql://127.0.0.1:3306/oop-php</jdbc-url>
       <jdbc-additional-properties>
         <property name="com.intellij.clouds.kubernetes.db.enabled" value="false" />
       </jdbc-additional-properties>
