@@ -30,7 +30,7 @@
             <ul class="nav navbar-nav">
                 <li><a href="/">Homepage</a></li>
                 <li><a href="/about">About</a></li>
-                <li><a href="#">Add Image</a></li>
+                <li><a href="/create">Add Image</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
