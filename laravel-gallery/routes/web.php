@@ -25,6 +25,11 @@ Route::get('/create', function () {
    return view('create');
 });
 
+Route::post('/store', function (\Illuminate\Http\Request $request ) {
+    $image = $request->file('image');
+    dd($image->store('uploads'));
+});
+
 Route::get('/show', function () {
    return view('show');
 });
