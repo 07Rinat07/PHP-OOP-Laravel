@@ -16,8 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $images = DB::table('images')->select('*')->get();
-   $myImages = $images->pluck('image')->all();
-
+    $myImages = $images->all();
 
     return view('welcome', ['imagesInView' => $myImages]);
 
@@ -35,14 +34,18 @@ Route::post('/store', function (\Illuminate\Http\Request $request) {
     $image = $request->file('image');
     $filename = $request->image->store('uploads');
 
-   DB::table('images')->insert([
-           'image' =>  $filename ]
-   );
-   return redirect('/');
+    DB::table('images')->insert([
+            'image' => $filename]
+    );
+    return redirect('/');
 });
 
-Route::get('/show', function () {
-    return view('show');
+Route::get('/show/{id}', function ($id) {
+    $image = DB::table('images')->select('*')->where('id', $id)->first();
+    $myImage = $image->image;
+
+
+    return view('show', ['imageInView' => $myImage]);
 });
 
 Route::get('/edit', function () {

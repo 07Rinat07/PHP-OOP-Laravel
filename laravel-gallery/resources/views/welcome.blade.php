@@ -8,10 +8,10 @@
             @foreach($imagesInView as $image)
                 <div class="col-md-3" gallery-item>
                         <div>
-                        <img src="{{$image}}" alt="" class="img-thumbnail">
+                        <img src="/{{$image->image}}" alt="" class="img-thumbnail">
                         </div>
 
-                            <a href="/show" class="btn btn-info my-button ">Show</a>
+                            <a href="/show/{{$image->id}}" class="btn btn-info my-button ">Show</a>
 
                             <a href="/edit" class="btn btn-warning my-button ">Edit</a>
 
